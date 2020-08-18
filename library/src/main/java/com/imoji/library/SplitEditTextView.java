@@ -1,4 +1,4 @@
-package com.al.open;
+package com.imoji.library;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -15,6 +15,8 @@ import android.view.InflateException;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatEditText;
+
+import com.al.view.R;
 
 import java.lang.reflect.Field;
 

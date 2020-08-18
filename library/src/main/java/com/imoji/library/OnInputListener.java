@@ -1,4 +1,4 @@
-package com.al.open;
+package com.imoji.library;
 
 /**
  * 输入的监听抽象类

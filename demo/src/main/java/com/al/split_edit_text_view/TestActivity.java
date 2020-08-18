@@ -5,8 +5,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.al.open.OnInputListener;
-import com.al.open.SplitEditTextView;
+import com.imoji.view.OnInputListener;
+import com.imoji.view.SplitEditTextView;
 
 class TestActivity extends AppCompatActivity {
     SplitEditTextView splitEditTextView;

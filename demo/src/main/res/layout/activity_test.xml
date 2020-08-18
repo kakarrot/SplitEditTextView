@@ -14,7 +14,7 @@
 
     </com.al.split_edit_text_view.AEditText>
 
-    <com.al.open.SplitEditTextView
+    <com.imoji.view.SplitEditTextView
         android:id="@+id/splitTextViewTest"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
