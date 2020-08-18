@@ -3,8 +3,8 @@ package com.al.split_edit_text_view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.imoji.view.OnInputListener
-import com.imoji.view.SplitEditTextView
+import com.imoji.library.OnInputListener
+import com.imoji.library.SplitEditTextView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

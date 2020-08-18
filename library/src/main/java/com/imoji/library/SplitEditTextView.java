@@ -16,8 +16,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.al.view.R;
-
 import java.lang.reflect.Field;
 
 public class SplitEditTextView extends AppCompatEditText{
