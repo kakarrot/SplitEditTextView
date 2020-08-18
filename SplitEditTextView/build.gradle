@@ -1,14 +1,19 @@
 apply plugin: 'com.android.library'
+//启用Jitpack 插件
+apply plugin: 'com.github.dcendents.android-maven'
+
+//设置Jitpack发布的Group
+group='com.github.kakarrot'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -28,24 +33,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-}
-
-apply plugin: 'com.novoda.bintray-release'
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.9.1'
-    }
-}
-
-publish {
-    userOrg = 'keeplearn'
-    groupId = 'com.open.keeplearn'
-    artifactId = 'SplitEditTextView'
-    publishVersion = '1.2.3'
-    desc = 'A Library Of Android UI.'
-    website = 'https://github.com/Chen-keeplearn/SplitEditTextView'
 }

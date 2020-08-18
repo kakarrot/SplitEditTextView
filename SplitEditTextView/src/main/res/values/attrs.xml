@@ -5,6 +5,8 @@
     <declare-styleable name="SplitEditTextView">
         <!--边框大小-->
         <attr name="borderSize" format="dimension" />
+        <!--边框宽高比例-->
+        <attr name="sizeRatio" format="float|dimension"/>
         <!--边框颜色-->
         <attr name="borderColor" format="color|reference" />
         <!--圆角大小-->

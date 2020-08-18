@@ -38,6 +38,10 @@ public class SplitEditTextView extends AppCompatEditText{
     private Paint mPaintUnderline;
     //边框大小
     private Float mBorderSize;
+
+    //宽高比例
+    private Float mRatio;
+
     //边框颜色
     private int mBorderColor;
     //圆角大小
@@ -95,6 +99,7 @@ public class SplitEditTextView extends AppCompatEditText{
     private void initAttrs(Context c, AttributeSet attrs) {
         TypedArray array = c.obtainStyledAttributes(attrs, R.styleable.SplitEditTextView);
         mBorderSize = array.getDimension(R.styleable.SplitEditTextView_borderSize, dp2px(1f));
+        mRatio = array.getFloat(R.styleable.SplitEditTextView_sizeRatio, 1F);
         mBorderColor = array.getColor(R.styleable.SplitEditTextView_borderColor, Color.BLACK);
         mCornerSize = array.getDimension(R.styleable.SplitEditTextView_corner_size, 0f);
         mDivisionLineSize = array.getDimension(R.styleable.SplitEditTextView_divisionLineSize, dp2px(1f));
@@ -209,7 +214,7 @@ public class SplitEditTextView extends AppCompatEditText{
                 case INPUT_BOX_STYLE_SINGLE:
                 case INPUT_BOX_STYLE_CONNECT:
                 default:
-                    setMeasuredDimension(width, (int) (itemWidth + mBorderSize * 2));
+                    setMeasuredDimension(width, (int) ((itemWidth + mBorderSize * 2) / mRatio));
                     break;
             }
         }
@@ -370,7 +375,7 @@ public class SplitEditTextView extends AppCompatEditText{
             float left = i * getContentItemWidth() + i * mSpaceSize + i * mBorderSize * 2 + mBorderSize / 2;
             float right = i * mSpaceSize + (i + 1) * getContentItemWidth() + (i + 1) * 2 * mBorderSize - mBorderSize / 2;
             //为避免在onDraw里面创建RectF对象,这里使用rectF.set()方法
-            mRectFSingleBox.set(left, mBorderSize / 2, right, getHeight() - mBorderSize / 2);
+            mRectFSingleBox.set(left, mBorderSize / (2 * mRatio), right, getHeight() - mBorderSize / (2 * mRatio));
             canvas.drawRoundRect(mRectFSingleBox, mCornerSize, mCornerSize, mPaintBorder);
         }
     }
